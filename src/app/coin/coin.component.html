@@ -1,0 +1,48 @@
+
+<div *ngIf="cryptos">
+  <h1 class="text-center">Crypto API Results</h1>
+  <div class="container" *ngFor="let crypto of objectKeys(cryptos)">
+    <div class="row justify-content-center">
+      <div class="col-4">
+        {{ crypto }}
+      </div>
+      <div class="col-4">
+        {{ cryptos[crypto].USD | currency: "USD" }}
+      </div>
+    </div>
+
+  </div>
+
+
+  <footer class="text-center">
+    <br />
+    <a class="text-center" href="https://www.garageatlas.com/" target="_blank" title="cryptoCurrency_link">ATLAS GARAGE</a>
+  </footer>
+
+  <!-- <ul id="todo-list">
+  <li *ngFor="let data of coinData | async" >
+     <p>{{data.id }}</p>
+  </li>
+</ul> -->
+  <!-- 
+<table class="table">
+    <thead>
+      <tr>
+        <th scope="col">Rank</th>
+        <th scope="col">Name</th>
+        <th scope="col">Price</th>
+        <th scope="col">Market Cap</th>
+        <th scope="col">vWap (24Hr)</th>
+        <th scope="col">Supply</th>
+        <th scope="col">Volume</th>
+        <th scope="col">Change</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor= "let coin of coinData">
+        <th scope="row">{{coin.data.name}}</th>
+        
+      </tr>
+      
+    </tbody>
+  </table> -->
